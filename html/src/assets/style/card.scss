@@ -1,0 +1,65 @@
+@import "color";
+
+.libra-card{
+  background: rgba(#ffffff,0);
+  height: 90px;
+  min-width: 100%;
+  border-radius: 10px;
+  transition-delay: 0.2s;
+  transition: all 0.4s linear;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+  &:hover{
+    background: rgba($CardBgColor,0.8);
+    .libra-card-icon {
+      img {
+        border-radius: 10px;
+      }
+      .libra-card-word{
+        border-radius: 10px;
+      }
+    }
+  }
+  .libra-card-category{
+    position: absolute;
+    left: 60px;
+    top: 5px;
+    color: white;
+    padding: 2px 4px;
+    background: $CategoryColor;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .libra-card-icon{
+    padding: 10px;
+    img{
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      transition: all 0.4s linear;
+    }
+    .libra-card-word{
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      transition: all 0.4s linear;
+      background: rgba($CardWordColor,0.8);
+      line-height: 70px;
+      font-size: 35px;
+      text-align: center;
+      color: white;
+    }
+  }
+  .libra-card-title{
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+    line-height: 90px;
+    //color: $WordMainColor;
+    color: white;
+    text-shadow: 0 0 1px rgba($WordMainColor,0.5);
+  }
+}

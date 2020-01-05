@@ -1,10 +1,16 @@
 <template>
     <div class="libra-card" @click="toHandler">
+        <div class="libra-card-category">
+            测试
+        </div>
         <div class="libra-card-icon">
-            <img :src="value">
+            <img :src="value" v-if="value">
+            <div class="libra-card-word" v-else>
+                {{title.substring(0,1)}}
+            </div>
         </div>
         <div class="libra-card-title">
-            <slot></slot>
+            {{title}}
         </div>
     </div>
 </template>
@@ -23,6 +29,10 @@
       to: {
         type: String,
         default: null
+      },
+      title: {
+        type: String,
+        default: null,
       }
     },
     data(){
@@ -51,41 +61,4 @@
   };
 </script>
 
-<style scoped lang="scss">
-    .libra-card{
-        background: rgba(#ffffff,0);
-        height: 90px;
-        min-width: 100%;
-        border-radius: 10px;
-        transition-delay: 0.2s;
-        transition: all 0.4s linear;
-        overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        cursor: pointer;
-        &:hover{
-            background: rgba(#f7f1e3,0.8);
-            .libra-card-icon {
-                img {
-                    border-radius: 10px;
-                }
-            }
-        }
-        .libra-card-icon{
-            padding: 10px;
-            img{
-                height: 70px;
-                width: 70px;
-                border-radius: 50%;
-                transition: all 0.4s linear;
-            }
-        }
-        .libra-card-title{
-            flex: 1;
-            font-size: 18px;
-            text-align: center;
-            line-height: 90px;
-            color: #20bf6b;
-        }
-    }
-</style>
+
