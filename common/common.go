@@ -6,6 +6,5 @@ import (
 
 var (
 	Cfg   *viper.Viper
-	Email *yuEmail
 	Ylog  *ylog
 )
