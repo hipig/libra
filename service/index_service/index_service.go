@@ -19,7 +19,7 @@ func NewIndexService(ctx context.Context) *indexService {
 }
 
 func (s *indexService) GenerNames(param *dto.GenerDto) *response.R {
-	list := GFactory(param).CreateText()
+	list := GFactory(param).CreateNames()
 	sort.SliceStable(list, func(i, j int) bool {
 		return list[i].Gender < list[j].Gender
 	})

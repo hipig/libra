@@ -5,7 +5,7 @@ import "github.com/lhlyu/libra/controller/dto"
 type IGener interface {
 	CreateFirstText() string
 	CreateSecondText() string
-	CreateText() []*NameData
+	CreateNames() []*NameData
 }
 
 type G struct {
@@ -21,7 +21,7 @@ func (G) CreateSecondText() string {
 	return ""
 }
 
-func (G) CreateText() []*NameData {
+func (G) CreateNames() []*NameData {
 	return nil
 }
 
