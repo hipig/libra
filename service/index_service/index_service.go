@@ -14,7 +14,9 @@ type indexService struct {
 
 func NewIndexService(ctx context.Context) *indexService {
 	return &indexService{
-		service.Service{ctx},
+		service.Service{
+			ctx,
+		},
 	}
 }
 

@@ -10,7 +10,8 @@ import (
 )
 
 func init() {
-	module.Register(module.CfgModule, // 读取配置 <必须>
+	module.Register(
+		module.CfgModule,      // 读取配置 <必须>
 		module.LgModule,       // 日志
 		module.InitiateModule, // 初始化
 		module.TimerModule,    // 启用定时任务

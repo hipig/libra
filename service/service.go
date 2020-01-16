@@ -7,13 +7,9 @@ import (
 )
 
 type Service struct {
-	ctx context.Context
+	Ctx context.Context
 }
 
 func (s Service) Log() *logrus.Entry {
-	return logger.GetLogger(s.ctx)
-}
-
-func (s Service) Context() context.Context {
-	return s.ctx
+	return logger.GetLogger(s.Ctx)
 }
