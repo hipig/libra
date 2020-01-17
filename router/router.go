@@ -19,5 +19,4 @@ func SetRouter(app *iris.Application) {
 		logger.Log(ctx).Infoln("hi", name)
 		ctx.Text("hello %s", name)
 	})
-
 }
